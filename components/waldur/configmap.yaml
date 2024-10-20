@@ -21,22 +21,23 @@ data:
     # is added to your upstream DNS servers. It is not possible
     # to create / manage such a DNS entry via Kubernetes.
 
-    # apiHostname: 128-232-226-7.sslip.io
-    # apiScheme: https
-    # homeportHostname: 128-232-226-7.sslip.io
-    # homeportScheme: https
-    # ingress:
-    #   tls:
-    #     enabled: true
-    #     source: letsEncrypt
-
     apiHostname: 128-232-226-7.sslip.io
-    apiScheme: http
+    apiScheme: https
     homeportHostname: 128-232-226-7.sslip.io
-    homeportScheme: http
+    homeportScheme: https
     ingress:
       tls:
-        enabled: false
+        enabled: true
+        className: nginx
+        source: letsEncrypt
+
+    # apiHostname: 128-232-226-7.sslip.io
+    # apiScheme: http
+    # homeportHostname: 128-232-226-7.sslip.io
+    # homeportScheme: http
+    # ingress:
+    #   tls:
+    #     enabled: false
 
     ### Example config for Keycloak integration
 
