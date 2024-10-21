@@ -602,7 +602,7 @@ async def bootstrap(cluster):
             "--secret-file", credentials_path,
             "--sealed-secret-file", credentials_path
         )
-        # Commit and push the changes to the remote
+        Commit and push the changes to the remote
         exec("git", "add", path)
         exec("git", "commit", "-m", f"Bootstrap cluster - {cluster}")
         exec("git", "push")
